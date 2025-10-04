@@ -2,7 +2,7 @@
 node_modules/
 server/node_modules/
 
-# Build folders (safe to ignore)
+# Build folders
 client/build/
 server/uploads/
 
@@ -13,11 +13,11 @@ server/uploads/
 .env.test.local
 .env.production.local
 
-# IDE
+# IDE / editor files
 .vscode/
 .idea/
 
-# OS
+# OS files
 .DS_Store
 Thumbs.db
 
@@ -34,7 +34,7 @@ pids/
 # Coverage
 coverage/
 
-# Other caches
+# Cache / optional
 .npm
 .jspm_packages/
 .yarn-integrity
