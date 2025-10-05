@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: safetysnap-backend
+    env: node
+    plan: free
+    region: oregon
+    autoDeploy: true
+
+    # Build and start from the server directory
+    buildCommand: cd server && npm ci
+    startCommand: cd server && npm start
+
+    healthCheckPath: /api/health
+
+    # Persistent storage for uploaded files
+    disks:
+      - name: uploads
+        mountPath: /opt/render/project/src/server/uploads
+        sizeGB: 1
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        sync: false
+
